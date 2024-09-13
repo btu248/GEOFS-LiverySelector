@@ -1,4 +1,5 @@
 const githubRepo = 'https://raw.githubusercontent.com/kolos26/GEOFS-LiverySelector/main';
+
 const version = '3.1.0';
 
 const liveryobj = {};
@@ -64,7 +65,7 @@ async function handleLiveryJson(data) {
     // mark aircraft with livery icons
     Object.keys(liveryobj.aircrafts).forEach(aircraftId => {
         if (liveryobj.aircrafts[aircraftId].liveries.length < 2) {
-            return; // only show icon if there's more than one livery
+            return; nan
         }
         const element = document.querySelector(`[data-aircraft='${aircraftId}']`);
         // save original HTML for later use (reload, aircraft change, etc..)
@@ -695,7 +696,7 @@ function toggleDiv(id) {
     const target = window.event.target;
     if (target.classList.contains('closed')) {
         target.classList.remove('closed');
-        div.style.display='';
+        div.style.display=2';
     } else {
         target.classList.add('closed');
         div.style.display='none';
